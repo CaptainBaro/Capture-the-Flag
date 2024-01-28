@@ -2,3 +2,39 @@ name: CTF
 version: '${project.version}'
 main: github.captionbaro.io.ctf.CTF
 api-version: '1.20'
+commands:
+  nick:
+    description: Nick you!
+  setup:
+    description: Setzte diverse Einstellungen
+  start:
+    description: Starte das Spiel!
+  setMoney:
+    description: Setze dir Money!
+  rank:
+    description: Gebe dir einen Rang!
+  leave:
+    description: Leave!
+    aliases: l
+  vanish:
+    description: Vanish!
+    aliases: v
+  money:
+    description: Geld!
+  test:
+    description: Es ist ein Test!
+  npc:
+    description: 3
+  map:
+    description: Give you a image.
+  playertp:
+    description: Opens a player gui.
+  gamble:
+    description: Glückspiel!
+  hub:
+
+  warp:
+
+
+depend:
+  - Currency
