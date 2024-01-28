@@ -1,0 +1,8 @@
+Kits enum:
+  String name;
+  int cost;
+  Abilities abilities;
+  double cooldown_1;
+  double cooldown_2;
+  double cooldown_ult;
+  
