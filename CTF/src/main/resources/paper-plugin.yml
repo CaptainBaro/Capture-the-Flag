@@ -1,4 +1,0 @@
-name: CTF
-version: '${project.version}'
-main: github.captionbaro.io.ctf.CTF
-api-version: '1.20'
