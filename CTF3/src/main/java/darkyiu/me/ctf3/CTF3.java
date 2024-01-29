@@ -1,5 +1,6 @@
 package darkyiu.me.ctf3;
 
+import darkyiu.me.ctf3.commands.KitCommand;
 import darkyiu.me.ctf3.kits.KitManager;
 import darkyiu.me.ctf3.kits.abilities.CooldownManager;
 import darkyiu.me.ctf3.listener.AbilitiesListener;
@@ -17,7 +18,7 @@ public final class CTF3 extends JavaPlugin {
         kitManager = new KitManager();
         cooldownManager = new CooldownManager();
 
-
+        getCommand("kit").setExecutor(new KitCommand());
         Bukkit.getPluginManager().registerEvents(new AbilitiesListener(), this);
     }
 

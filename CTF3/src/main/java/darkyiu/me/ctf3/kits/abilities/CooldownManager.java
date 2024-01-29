@@ -1,7 +1,7 @@
 package darkyiu.me.ctf3.kits.abilities;
 
 import darkyiu.me.ctf3.CTF3;
-import jdk.tools.jmod.Main;
+
 import org.bukkit.entity.Player;
 
 import java.util.HashMap;
