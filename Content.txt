@@ -40,7 +40,7 @@ Zeus:
 	Normal1: Flieg in die Luft und hab eine Elytra für eine kurze Zeit
 	Normal2: Knock Gegner in einem Bereich vor dir zurück.
 	Ulti: Macht Blitze auf Gegner in einem Kreis um dich herum, aber nicht auf welche die ganz nah sind.
-	Passive: 
+	Passive: Have a permanent glider when using space two times
 Athene:
 	Normal1: werd kurz unsichtbar für kurze Zeit bis du jemanden angreifst
 	Normal2: Krieg wall hacks für eine kurze Zeit
