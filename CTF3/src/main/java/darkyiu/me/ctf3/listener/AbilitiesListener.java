@@ -44,6 +44,22 @@ public class AbilitiesListener implements Listener {
             return;
         }
         plugin.getCooldownManager().setCooldown(player.getUniqueId().toString() + ability, (long) kit.getCooldown_1());
+        String message = "§aYou used";
+        switch (ability){
+            case 1:
+                message+=kit.getAbility_1();
+                break;
+            case 2:
+                message+=kit.getAbility_2();
+                break;
+            case 3:
+                message+=kit.getAbility_ult();
+                break;
+            default:
+                message+="How do you have more than three abilities?";
+                break;
+        }
+        player.sendMessage(message);
         kit.getAbilities().ability_1(player);
     }
 }

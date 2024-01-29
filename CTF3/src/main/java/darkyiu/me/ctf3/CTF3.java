@@ -17,6 +17,7 @@ public final class CTF3 extends JavaPlugin {
         kitManager = new KitManager();
         cooldownManager = new CooldownManager();
 
+
         Bukkit.getPluginManager().registerEvents(new AbilitiesListener(), this);
     }
 

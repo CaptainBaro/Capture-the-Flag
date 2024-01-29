@@ -17,4 +17,9 @@ public class KitManager {
         return playerKitsMap.getOrDefault(player, null);
     }
 
+    public void giveKit(Player player, Kits kits){
+        setKit(player, kits);
+
+    }
+
 }

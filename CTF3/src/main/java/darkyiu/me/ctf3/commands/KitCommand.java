@@ -15,7 +15,7 @@ public class KitCommand implements CommandExecutor {
         if(Kits.getKit(strings[0])==null)return false;
         Player player = (Player) commandSender;
         Kits kits = Kits.getKit(strings[0]);
-        CTF3.getPlugin().getKitManager().setKit(player, kits);
+        CTF3.getPlugin().getKitManager().giveKit(player, kits);
         return false;
     }
 }
