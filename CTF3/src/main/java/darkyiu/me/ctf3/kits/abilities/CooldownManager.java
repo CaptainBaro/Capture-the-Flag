@@ -29,6 +29,7 @@ public class CooldownManager {
         if (TimeUnit.MILLISECONDS.toMillis(timeLeft) >= cooldown){
             return true;
         }
+        player.sendMessage("§cThis ability is still charging for " + TimeUnit.MILLISECONDS.toSeconds(cooldown - timeLeft) + " seconds!.");
         return false;
 
     }

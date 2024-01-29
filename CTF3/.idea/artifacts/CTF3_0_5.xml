@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CTF3-0.5">
+    <output-path>$PROJECT_DIR$/../..</output-path>
+    <root id="archive" name="CTF3-0.5.jar">
+      <element id="module-output" name="CTF3" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+    </root>
+  </artifact>
+</component>
