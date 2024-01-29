@@ -13,15 +13,15 @@ Hades:
 Aphrodite:
   	Normal1: Geschenk der Aphrodite: Gibt dir für 10 Sekunden Resistance.
   	Normal2: Heilender Kreis: Heilt deine Verbündeten in einem Radius von 7 Blöcken
-  	Ulti: Schießt einen Glitzer strahl der,wenn er jemanden trifft,denjenigen 3 Mal im Kreis drehen lässt
-	Passive: alle 30 Sekunden kriegen alle Aphroditen Kinder einen heal?
+  	Ulti: AOE charm, slowness 5 für alle die erwischt werden, Aphrodite kriegt Absorbtion hearts für eine kurze Zeit
+	Passive: alle 30 Sekunden kriegen alle Aphroditen Kinder absorbtion hearts?
 Ares:
-  	Normal1: Hebt jemanden hoch und wirft ihn weg
-  	Normal2: Spawn 2 Wölfe die im Helfen
+  	Normal2: Hebt jemanden hoch und wirft ihn weg
+  	Normal1: Ein Slash der in einem Bereich vor dir damage macht
   	Ulti: Gibr dir Stärke für ein paar Sekunden
  	Passive: Hat ein starke Rüstung
 Dionysos:
-	Normal1:
+	Normal1: 
 	Normal2: Weinparty, gibt deinen Gegner um dich herum, Betrunkenheit(Nausae)
 	Ulti: Gibt dem gesamten Team einen positiven Effekt()
 	Passive: immunne to negative effects like weakness and nausea
@@ -34,5 +34,20 @@ Hephaistos:
 Apollon:
 	Normal1:Pfeilsturm
 	Normal2:Spiel auf der Leier, gibt deinen Gegnern um dich herum einen bestimmten Effekt()
-	Ulti: 
+	Ulti: Vielleicht irgendwas mit einer Krankheit
 	Passiv: Macht mehr Damage mit einen Bogen.
+Zeus:
+	Normal1: Flieg in die Luft und hab eine Elytra für eine kurze Zeit
+	Normal2: Knock Gegner in einem Bereich vor dir zurück.
+	Ulti: Macht Blitze auf Gegner in einem Kreis um dich herum, aber nicht auf welche die ganz nah sind.
+	Passive: 
+Athene:
+	Normal1: werd kurz unsichtbar für kurze Zeit bis du jemanden angreifst
+	Normal2: Krieg wall hacks für eine kurze Zeit
+	Ulti: Alle deine Teammates kriegen die ersten beiden Fähigkeiten
+	Passive: 
+Artemis:
+	Normal1: Beschwöre Wölfe
+	Normal2: Hunt, ein gegnerischer Spieler wird markiert und wenn sie in tötet kriegt sie ein höheres Power enchantment auf ihrem Bogen
+	Ulti: Beschwört die Nacht
+	Passive:Maybe night vision und wall hacks in der nacht
