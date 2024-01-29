@@ -53,15 +53,15 @@ public class AbilitiesListener implements Listener {
         switch (ability){
             case 1:
                 message+=kit.getAbility_1();
-                kit.getAbilities().ability_1(player);
+                kit.getAbilities().ability_1(player, plugin);
                 break;
             case 2:
                 message+=kit.getAbility_2();
-                kit.getAbilities().ability_2(player);
+                kit.getAbilities().ability_2(player, plugin);
                 break;
             case 3:
                 message+=kit.getAbility_ult();
-                kit.getAbilities().ultimate(player);
+                kit.getAbilities().ultimate(player, plugin);
                 break;
             default:
                 message+="How do you have more than three abilities?";

@@ -1,11 +1,14 @@
 package darkyiu.me.ctf3.listener;
 
 import darkyiu.me.ctf3.CTF3;
+import darkyiu.me.ctf3.kits.Kits;
+import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
-
+import org.bukkit.event.entity.EntityToggleGlideEvent;
+import org.bukkit.event.player.PlayerToggleFlightEvent;
 
 
 public class PassiveListener implements Listener {
@@ -23,4 +26,8 @@ public class PassiveListener implements Listener {
             }
         }
     }
+
+
+
+
 }

@@ -1,12 +1,14 @@
 package darkyiu.me.ctf3.kits;
 
-import darkyiu.me.ctf3.kits.abilities.Abilities;
-import darkyiu.me.ctf3.kits.abilities.HermesAbilities;
+import darkyiu.me.ctf3.kits.abilities.*;
 
 import java.util.Objects;
 
 public enum Kits {
 
+    ARES("Ares", "God of War", "Violent SLash", "Throwaway", "Enrage", 300, new AresAbilities(), 5, 5, 30),
+    ZEUS("Zeus", "God of lightning", "Fly high", "Knockback", "Lightning storm", 500, new ZeusAbilities(), 10, 10, 60),
+    APHRODITE("Aphrodite", "The godess of love and desire.", "Brace yourself", "Healing Circle", "Charm", 200, new AphroditeAbilities(), 20, 20, 60),
     HERMES("Hermes","The god of everything that walks on streets.", "Dash", "Speed", "Mix Up",200, new HermesAbilities(), 15, 10, 60);
 
     private final String name;

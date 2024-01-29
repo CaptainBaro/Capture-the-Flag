@@ -1,5 +1,6 @@
 package darkyiu.me.ctf3.kits.abilities;
 
+import darkyiu.me.ctf3.CTF3;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
@@ -8,7 +9,7 @@ import org.bukkit.util.Vector;
 
 public class HermesAbilities implements Abilities{
     @Override
-    public void ability_1(Player player) {
+    public void ability_1(Player player, CTF3 plugin) {
         double pitch = ((player.getLocation().getPitch() + 90) * Math.PI) / 180;
         double yaw  = ((player.getLocation().getYaw() + 90)  * Math.PI) / 180;
         double x = Math.sin(pitch) * Math.cos(yaw);
@@ -21,13 +22,13 @@ public class HermesAbilities implements Abilities{
     }
 
     @Override
-    public void ability_2(Player player) {
+    public void ability_2(Player player, CTF3 plugin) {
         player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 5*20, 1));
         player.playSound(player.getLocation(), Sound.BLOCK_COMPOSTER_FILL_SUCCESS, 1, 2.0f);
     }
 
     @Override
-    public void ultimate(Player player) {
+    public void ultimate(Player player, CTF3 plugin) {
 
     }
 }
