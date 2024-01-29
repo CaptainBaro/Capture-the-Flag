@@ -1,0 +1,38 @@
+Content:
+Kits:
+Hermes:
+	Normal1:DoppelSprung, noch nicht kanns sicher vieleicht eher ein Dash 
+	Normal2:Schnelligkeit?
+	Ulti:Inventar mischen
+	Passive:Kriegt keinen Fallschaden
+Hades:
+	Normal1: Zauber des Erblindens, erblindet für kurze Zeit alle Gegner um ihn herum
+	Normal2:Zauber der Ederlsteinen, spawn edelsteine um sich herum die Gegner die daruaf trettem Schaden zufügt
+	Ulti: Schattenreisen
+  	Passive:Heilt sich nach jeden Kill um eine bestimmte Zahl
+Aphrodite:
+  	Normal1: Geschenk der Aphrodite: Gibt dir für 10 Sekunden Resistance.
+  	Normal2: Heilender Kreis: Heilt deine Verbündeten in einem Radius von 7 Blöcken
+  	Ulti: Schießt einen Glitzer strahl der,wenn er jemanden trifft,denjenigen 3 Mal im Kreis drehen lässt
+	Passive: alle 30 Sekunden kriegen alle Aphroditen Kinder einen heal?
+Ares:
+  	Normal1: Hebt jemanden hoch und wirft ihn weg
+  	Normal2: Spawn 2 Wölfe die im Helfen
+  	Ulti: Gibr dir Stärke für ein paar Sekunden
+ 	Passive: Hat ein starke Rüstung
+Dionysos:
+	Normal1:
+	Normal2: Weinparty, gibt deinen Gegner um dich herum, Betrunkenheit(Nausae)
+	Ulti: Gibt dem gesamten Team einen positiven Effekt()
+	Passive: immunne to negative effects like weakness and nausea
+Hephaistos:
+	Normal1:Wirft einen Feuerball
+	Nomal2: Stellt einen Turm auf der die Gegner abschießt
+	Ulti: Upgradet dein Schwert für kurze Zeit.
+  	Passiv: Nach einem Kill gibt es eine Chance dass sich seine Rüstung verstärkt.
+  
+Apollon:
+	Normal1:Pfeilsturm
+	Normal2:Spiel auf der Leier, gibt deinen Gegnern um dich herum einen bestimmten Effekt()
+	Ulti: 
+	Passiv: Macht mehr Damage mit einen Bogen.
