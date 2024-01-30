@@ -22,6 +22,9 @@ public final class CTF3 extends JavaPlugin {
     private BasicUtil basicUtil;
     private GameStateManager gameStateManager;
     private ArrayListManager arrayListManager;
+
+    public static String prefix = "§a[CTF]";
+
     @Override
     public void onEnable() {
         // Plugin startup logic

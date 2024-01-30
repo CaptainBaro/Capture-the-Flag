@@ -1,6 +1,7 @@
 package darkyiu.me.ctf3.gamestates;
 
 import darkyiu.me.ctf3.countdowns.LobbyCountdown;
+import org.bukkit.Bukkit;
 
 public class LobbyState extends GameState{
 
@@ -14,11 +15,15 @@ public class LobbyState extends GameState{
 
     @Override
     public void start() {
-        System.out.println("LOBBYSTATE GESTRARTET");
+        countdown.startIdle();
     }
 
     @Override
     public void stop() {
+        Bukkit.broadcastMessage("Wir wären jetzt im IngameState!");
+    }
 
+    public LobbyCountdown getCountdown() {
+        return countdown;
     }
 }

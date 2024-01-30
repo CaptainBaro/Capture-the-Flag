@@ -1,6 +1,7 @@
 package darkyiu.me.ctf3.listener;
 
 import darkyiu.me.ctf3.CTF3;
+import darkyiu.me.ctf3.countdowns.LobbyCountdown;
 import darkyiu.me.ctf3.gamestates.LobbyState;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -24,8 +25,13 @@ public class PlayerConnectionListener implements Listener {
         plugin.getArrayListManager().getPlayers().add(player);
         event.setJoinMessage("§a" + player.getDisplayName() + " §7ist dem Spiel beigetreten. [" + plugin.getArrayListManager().getPlayers().size() + "/" + LobbyState.MAX_PLAYERS + "]");
 
+        LobbyState lobbyState = (LobbyState) plugin.getGameStateManager().getCurrentGameState();
+        LobbyCountdown countdown = lobbyState.getCountdown();
         if(plugin.getArrayListManager().getPlayers().size() >= LobbyState.MIN_PLAYERS){
-            Bukkit.broadcastMessage("Das Spiel würde starten.");
+            if (!countdown.isRunning()){
+                countdown.stopIdle();
+                countdown.start();
+            }
         }
     }
 
@@ -35,5 +41,16 @@ public class PlayerConnectionListener implements Listener {
         Player player = event.getPlayer();
         plugin.getArrayListManager().getPlayers().remove(player);
         event.setQuitMessage("§c" + player.getDisplayName() + " §7hat das Spiel verlassen. [" + plugin.getArrayListManager().getPlayers().size() + "/" + LobbyState.MAX_PLAYERS + "]");
+
+        LobbyState lobbyState = (LobbyState) plugin.getGameStateManager().getCurrentGameState();
+        LobbyCountdown countdown = lobbyState.getCountdown();
+        if (plugin.getArrayListManager().getPlayers().size() < LobbyState.MIN_PLAYERS){
+            if (countdown.isRunning()){
+                countdown.stop();
+                countdown.startIdle();
+            }
+        }
     }
+
+
 }
