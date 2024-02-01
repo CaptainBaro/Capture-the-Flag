@@ -8,15 +8,22 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class KitCommand implements CommandExecutor {
+
+    private CTF3 plugin;
+
+    public KitCommand(CTF3 plugin){
+        this.plugin = plugin;
+    }
+
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if(!(commandSender instanceof Player))return false;
         Player player = (Player) commandSender;
         if(strings.length==0){
-            if(CTF3.getPlugin().getKitManager().getKit(player)==null){
+            if(plugin.getKitManager().getKit(player)==null){
                 player.sendMessage("§cYou don't have a kit!");
             }else {
-                player.sendMessage("§aYou have the kit " + CTF3.getPlugin().getKitManager().getKit(player));
+                player.sendMessage("§aYou have the kit " + plugin.getKitManager().getKit(player));
             }
             return false;
         }
@@ -26,7 +33,7 @@ public class KitCommand implements CommandExecutor {
         }
 
         Kits kits = Kits.getKit(strings[0]);
-        CTF3.getPlugin().getKitManager().giveKit(player, kits);
+        plugin.getKitManager().giveKit(player, kits);
         return false;
     }
 }

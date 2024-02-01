@@ -21,29 +21,7 @@ import java.util.List;
 
 public class ZeusAbilities implements Abilities, Listener {
 
-    private List<Player> flying = new ArrayList<>();
-    private CTF3 plugin = CTF3.getPlugin();
 
-    public ZeusAbilities(){
-        Bukkit.getScheduler().runTaskTimer(plugin, new Runnable() {
-            @Override
-            public void run() {
-                Bukkit.getWorld("world").getPlayers().forEach(player -> {
-                    if (player.getGameMode()!=GameMode.SURVIVAL)return;
-                    if (plugin.getKitManager().getKit(player)!=Kits.ZEUS)return;
-                    player.setAllowFlight(true);
-                    if (flying.contains(player)&&!player.getLocation().getBlock().getRelative(BlockFace.DOWN).getType().isAir()){
-                        player.setAllowFlight(false);
-                        player.setFlying(false);
-                        player.setGliding(false);
-                        Bukkit.getScheduler().runTaskLater(plugin, () -> {
-                            flying.remove(player);
-                        },5);
-                    }
-                });
-            }
-        },0,3);
-    }
     @Override
     public void ability_1(Player player, CTF3 plugin) {
         Vector vector = new Vector();
@@ -54,7 +32,7 @@ public class ZeusAbilities implements Abilities, Listener {
 
     @Override
     public void ability_2(Player player, CTF3 plugin) {
-        List<LivingEntity> livingEntities = new ArrayList<>();
+        List<Entity> livingEntities = new ArrayList<>();
         Vector original = player.getLocation().getDirection();
         int size = 1;
         for (int i = 1; i<6; i++){
@@ -68,7 +46,7 @@ public class ZeusAbilities implements Abilities, Listener {
 
         }
         livingEntities.remove(player);
-        for (LivingEntity entity : livingEntities){
+        for (Entity entity : livingEntities){
             entity.setVelocity(original.add(new Vector(0,0.5,0)).multiply(2));
         }
     }
@@ -92,25 +70,5 @@ public class ZeusAbilities implements Abilities, Listener {
 
     }
 
-    @EventHandler(ignoreCancelled = true)
-    public void onEntityToggleGlide(EntityToggleGlideEvent event) {
-        if(event.getEntityType() == EntityType.PLAYER && flying.contains(event.getEntity()))event.setCancelled(true);
-    }
 
-    @EventHandler(ignoreCancelled = true)
-    public void onPlayerToggleFlight(PlayerToggleFlightEvent event) {
-        Player player = event.getPlayer();
-        if(player.getGameMode() != GameMode.SURVIVAL)return;
-        if(plugin.getKitManager().getKit(player)!=Kits.ZEUS)return;
-        event.setCancelled(true);
-        event.getPlayer().setGliding(true);
-        flying.add(player);
-    }
-
-    @EventHandler(ignoreCancelled = true)
-    public void onEntityDamage(EntityDamageEvent event) {
-        if(event.getEntityType()== EntityType.PLAYER
-                &&(event.getCause()== EntityDamageEvent.DamageCause.FALL || event.getCause()== EntityDamageEvent.DamageCause.FLY_INTO_WALL)
-                &&flying.contains(event.getEntity()))event.setCancelled(true);
-    }
 }

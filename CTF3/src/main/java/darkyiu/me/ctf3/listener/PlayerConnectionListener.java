@@ -20,7 +20,10 @@ public class PlayerConnectionListener implements Listener {
 
     @EventHandler(ignoreCancelled = true)
     public void onPlayerJoin(PlayerJoinEvent event) {
-        if(!(plugin.getGameStateManager().getCurrentGameState() instanceof LobbyState))return;
+        for (Player vanished : plugin.getArrayListManager().getVanished()){
+            event.getPlayer().hidePlayer(plugin, vanished);
+        }
+        /*if(!(plugin.getGameStateManager().getCurrentGameState() instanceof LobbyState))return;
         Player player = event.getPlayer();
         plugin.getArrayListManager().getPlayers().add(player);
         event.setJoinMessage("§a" + player.getDisplayName() + " §7ist dem Spiel beigetreten. [" + plugin.getArrayListManager().getPlayers().size() + "/" + LobbyState.MAX_PLAYERS + "]");
@@ -32,14 +35,14 @@ public class PlayerConnectionListener implements Listener {
                 countdown.stopIdle();
                 countdown.start();
             }
-        }
+        }*/
     }
 
     @EventHandler(ignoreCancelled = true)
     public void onPlayerQuit(PlayerQuitEvent event) {
+        plugin.getArrayListManager().getPlayers().remove(event.getPlayer());
         if(!(plugin.getGameStateManager().getCurrentGameState() instanceof LobbyState))return;
         Player player = event.getPlayer();
-        plugin.getArrayListManager().getPlayers().remove(player);
         event.setQuitMessage("§c" + player.getDisplayName() + " §7hat das Spiel verlassen. [" + plugin.getArrayListManager().getPlayers().size() + "/" + LobbyState.MAX_PLAYERS + "]");
 
         LobbyState lobbyState = (LobbyState) plugin.getGameStateManager().getCurrentGameState();

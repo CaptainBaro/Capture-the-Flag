@@ -44,10 +44,10 @@ Zeus:
 Athene:
 	Normal1: werd kurz unsichtbar für kurze Zeit bis du jemanden angreifst
 	Normal2: Krieg wall hacks für eine kurze Zeit
-	Ulti: Alle deine Teammates kriegen die ersten beiden Fähigkeiten
+	Ulti: Wall Hacks für alle und cooldowns werden reduziert
 	Passive: 
 Artemis:
 	Normal1: Beschwöre Wölfe
-	Normal2: Hunt, ein gegnerischer Spieler wird markiert und wenn sie in tötet kriegt sie ein höheres Power enchantment auf ihrem Bogen
+	Normal2: Hunt, ein gegnerischer Spieler wird markiert und wenn sie in tötet kriegt sie ein höheres Power enchantment auf 	ihrem Bogen
 	Ulti: Beschwört die Nacht
-	Passive:Maybe night vision und wall hacks in der nacht
+	Passive:Maybe night vision und wall hacks in der nacht, außerdem einen buff wie stärke oder so

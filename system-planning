@@ -6,3 +6,6 @@ Kits enum:
   double cooldown_2;
   double cooldown_ult;
   
+
+GUI:
+GUI interface: show(Inventory inventory,Player player), PlayerInteractListener, build()

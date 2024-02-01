@@ -10,6 +10,11 @@ import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 
 public class AbilitiesListener implements Listener {
 
+    private CTF3 plugin;
+    public AbilitiesListener(CTF3 plugin){
+        this.plugin = plugin;
+    }
+
     @EventHandler(ignoreCancelled = true)
     public void onPlayerSwapHandItems(PlayerSwapHandItemsEvent event) {
         event.setCancelled(true);
@@ -28,7 +33,6 @@ public class AbilitiesListener implements Listener {
     }
 
     public void useAbility(Player player, int ability){
-        CTF3 plugin = CTF3.getPlugin();
         if(plugin.getKitManager().getKit(player)==null){return;}
         Kits kit = plugin.getKitManager().getKit(player);
         int cooldown = 0;

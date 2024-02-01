@@ -10,6 +10,12 @@ import java.util.concurrent.TimeUnit;
 
 public class CooldownManager {
 
+    private CTF3 plugin;
+    public CooldownManager(CTF3 plugin){
+        this.plugin = plugin;
+    }
+
+
     private final Map<String, Long>cooldowns = new HashMap<>();
 
     public void setCooldown(String abilityname, long time){
@@ -25,7 +31,7 @@ public class CooldownManager {
     public boolean onCooldown(Player player, double abilityCooldown, int ability){
         String playerAbility = player.getUniqueId().toString() + ability;
         long cooldown = (long) (abilityCooldown * 1000L);
-        long timeLeft =System.currentTimeMillis() - CTF3.getPlugin().getCooldownManager().getCooldown(playerAbility);
+        long timeLeft =System.currentTimeMillis() - plugin.getCooldownManager().getCooldown(playerAbility);
         if (TimeUnit.MILLISECONDS.toMillis(timeLeft) >= cooldown){
             return true;
         }

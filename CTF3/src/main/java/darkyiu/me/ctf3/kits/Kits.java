@@ -6,6 +6,9 @@ import java.util.Objects;
 
 public enum Kits {
 
+    ARTEMIS("Artemis", "Goddes of the moon and hunting", "Wolf attack", "Great Hunt", "Moon, Give me power", 400, new ArtemisAbilities(), 10, 20, 60),
+    HEPHAISTOS("Hephaistos", "God of fire and smithing", "Fireball", "Protection Turret", "Ultimate Upgrade", 300, new HephaistosAbilities(), 10, 20, 50),
+    HADES("Hades", "God of the underworld and the undead", "Spell of Blinding", "Spell of Gemstones", "Shadow Travel", 400, new HadesAbilities(), 20, 15, 60),
     ARES("Ares", "God of War", "Violent SLash", "Throwaway", "Enrage", 300, new AresAbilities(), 5, 5, 30),
     ZEUS("Zeus", "God of lightning", "Fly high", "Knockback", "Lightning storm", 500, new ZeusAbilities(), 10, 10, 60),
     APHRODITE("Aphrodite", "The godess of love and desire.", "Brace yourself", "Healing Circle", "Charm", 200, new AphroditeAbilities(), 20, 20, 60),
