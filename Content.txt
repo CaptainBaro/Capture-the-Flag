@@ -3,7 +3,7 @@ Kits:
 Hermes:
 	Normal1:DoppelSprung, noch nicht kanns sicher vieleicht eher ein Dash 
 	Normal2:Schnelligkeit?
-	Ulti:Inventar mischen
+	Ulti: Ultimate stehlen
 	Passive:Kriegt keinen Fallschaden
 Hades:
 	Normal1: Zauber des Erblindens, erblindet für kurze Zeit alle Gegner um ihn herum
